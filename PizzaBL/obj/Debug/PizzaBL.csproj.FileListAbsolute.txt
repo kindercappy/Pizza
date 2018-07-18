@@ -1,0 +1,5 @@
+D:\cappy\projects\PIzza\PizzaBL\bin\Debug\PizzaBL.dll
+D:\cappy\projects\PIzza\PizzaBL\bin\Debug\PizzaBL.pdb
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csprojResolveAssemblyReference.cache
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.dll
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.pdb
