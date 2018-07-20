@@ -1,6 +1,6 @@
 using System;
 
-namespace PIzzaApi.Areas.HelpPage.ModelDescriptions
+namespace PizzaApi.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

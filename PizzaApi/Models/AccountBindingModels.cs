@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace PIzzaApi.Models
+namespace PizzaApi.Models
 {
     // Models used as parameters to AccountController actions.
 

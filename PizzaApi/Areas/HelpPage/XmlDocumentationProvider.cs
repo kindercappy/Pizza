@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using PIzzaApi.Areas.HelpPage.ModelDescriptions;
+using PizzaApi.Areas.HelpPage.ModelDescriptions;
 
-namespace PIzzaApi.Areas.HelpPage
+namespace PizzaApi.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.

@@ -1,5 +1,13 @@
 D:\cappy\projects\PIzza\PizzaBL\bin\Debug\PizzaBL.dll
 D:\cappy\projects\PIzza\PizzaBL\bin\Debug\PizzaBL.pdb
-D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csprojResolveAssemblyReference.cache
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.dll
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.pdb
+D:\cappy\projects\PIzza\PizzaBL\bin\Debug\PizzaBL.dll.config
+D:\cappy\projects\PIzza\PizzaBL\bin\Debug\EntityFramework.dll
+D:\cappy\projects\PIzza\PizzaBL\bin\Debug\EntityFramework.SqlServer.dll
+D:\cappy\projects\PIzza\PizzaBL\bin\Debug\EntityFramework.xml
+D:\cappy\projects\PIzza\PizzaBL\bin\Debug\EntityFramework.SqlServer.xml
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csprojResolveAssemblyReference.cache
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.InitialCreate.resources
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csproj.GenerateResource.Cache
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedPizzaClassForVegNonveg.resources

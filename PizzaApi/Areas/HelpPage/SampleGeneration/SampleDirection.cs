@@ -1,4 +1,4 @@
-namespace PIzzaApi.Areas.HelpPage
+namespace PizzaApi.Areas.HelpPage
 {
     /// <summary>
     /// Indicates whether the sample is used for request or response

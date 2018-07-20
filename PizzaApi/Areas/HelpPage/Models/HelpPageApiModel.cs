@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using PIzzaApi.Areas.HelpPage.ModelDescriptions;
+using PizzaApi.Areas.HelpPage.ModelDescriptions;
 
-namespace PIzzaApi.Areas.HelpPage.Models
+namespace PizzaApi.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

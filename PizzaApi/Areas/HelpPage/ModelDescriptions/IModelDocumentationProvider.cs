@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 
-namespace PIzzaApi.Areas.HelpPage.ModelDescriptions
+namespace PizzaApi.Areas.HelpPage.ModelDescriptions
 {
     public interface IModelDocumentationProvider
     {

@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using PIzzaApi.Areas.HelpPage.ModelDescriptions;
-using PIzzaApi.Areas.HelpPage.Models;
+using PizzaApi.Areas.HelpPage.ModelDescriptions;
+using PizzaApi.Areas.HelpPage.Models;
 
-namespace PIzzaApi.Areas.HelpPage.Controllers
+namespace PizzaApi.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

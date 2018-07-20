@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace PIzzaApi
+namespace PizzaApi
 {
     public class BundleConfig
     {

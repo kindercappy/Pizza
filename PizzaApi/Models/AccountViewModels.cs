@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PIzzaApi.Models
+namespace PizzaApi.Models
 {
     // Models returned by AccountController actions.
 

@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace PIzzaApi.Areas.HelpPage.ModelDescriptions
+namespace PizzaApi.Areas.HelpPage.ModelDescriptions
 {
     public class ComplexTypeModelDescription : ModelDescription
     {

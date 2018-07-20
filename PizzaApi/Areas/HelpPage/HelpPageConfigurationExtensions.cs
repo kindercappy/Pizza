@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using PIzzaApi.Areas.HelpPage.ModelDescriptions;
-using PIzzaApi.Areas.HelpPage.Models;
+using PizzaApi.Areas.HelpPage.ModelDescriptions;
+using PizzaApi.Areas.HelpPage.Models;
 
-namespace PIzzaApi.Areas.HelpPage
+namespace PizzaApi.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

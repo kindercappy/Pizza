@@ -87,3 +87,6 @@ D:\cappy\projects\PIzza\PIzzaApi\bin\Microsoft.Owin.Security.MicrosoftAccount.xm
 D:\cappy\projects\PIzza\PIzzaApi\bin\System.Web.Http.Owin.xml
 D:\cappy\projects\PIzza\PIzzaApi\obj\Debug\PIzzaApi.dll
 D:\cappy\projects\PIzza\PIzzaApi\obj\Debug\PIzzaApi.pdb
+D:\cappy\projects\PIzza\PIzzaApi\bin\PizzaBL.dll
+D:\cappy\projects\PIzza\PIzzaApi\bin\PizzaBL.pdb
+D:\cappy\projects\PIzza\PIzzaApi\obj\Debug\PizzaApi.csprojResolveAssemblyReference.cache

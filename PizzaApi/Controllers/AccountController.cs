@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using PIzzaApi.Models;
-using PIzzaApi.Providers;
-using PIzzaApi.Results;
+using PizzaApi.Models;
+using PizzaApi.Providers;
+using PizzaApi.Results;
 
-namespace PIzzaApi.Controllers
+namespace PizzaApi.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(PIzzaApi.Startup))]
+[assembly: OwinStartup(typeof(PizzaApi.Startup))]
 
-namespace PIzzaApi
+namespace PizzaApi
 {
     public partial class Startup
     {

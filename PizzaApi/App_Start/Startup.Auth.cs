@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using PIzzaApi.Providers;
-using PIzzaApi.Models;
+using PizzaApi.Providers;
+using PizzaApi.Models;
 
-namespace PIzzaApi
+namespace PizzaApi
 {
     public partial class Startup
     {

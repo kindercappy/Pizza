@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace PIzzaApi.Areas.HelpPage
+namespace PizzaApi.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

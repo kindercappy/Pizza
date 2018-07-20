@@ -1,4 +1,4 @@
-namespace PIzzaApi.Areas.HelpPage.ModelDescriptions
+namespace PizzaApi.Areas.HelpPage.ModelDescriptions
 {
     public class SimpleTypeModelDescription : ModelDescription
     {
