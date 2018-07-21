@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201807201351554_UpdatedPizzaClassForVegNonveg.Designer.cs">
       <DependentUpon>201807201351554_UpdatedPizzaClassForVegNonveg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.cs" />
+    <Compile Include="Migrations\201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.Designer.cs">
+      <DependentUpon>201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Pizza.cs" />
@@ -81,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807201351554_UpdatedPizzaClassForVegNonveg.resx">
       <DependentUpon>201807201351554_UpdatedPizzaClassForVegNonveg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.resx">
+      <DependentUpon>201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PizzaBL
@@ -12,10 +13,8 @@ namespace PizzaBL
     [Table("Pizza")]
     public class Pizza
     {
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int pizzaId { get; set; }
-
         public string name { get; set; }
         public PizzaBase pizzaBase { get; set; }
         public bool veg { get; set; }
@@ -47,7 +46,7 @@ namespace PizzaBL
                 {
                     pizzas = db.Pizza.Include("toppingsList").Where(pizzasFilter => pizzasFilter.veg == true).ToList();
                 }
-                else if(typeOfPizza.ToLower() == "nonveg")
+                else if (typeOfPizza.ToLower() == "nonveg")
                 {
                     pizzas = db.Pizza.Include("toppingsList").Where(pizzasFilter => pizzasFilter.nonVeg == true).ToList();
                 }
@@ -69,17 +68,20 @@ namespace PizzaBL
                 foreach (var pizzaProp in pizzaProps)
                 {
                     pizza = db.Pizza.Where(e => e.pizzaId == pizzaId).FirstOrDefault();
-                    
                     string pizzaPropToString = pizzaProp.Name;
+                    bool isPrimaryId = Regex.IsMatch(pizzaPropToString, @"\w+Id$");
                     var pizzaProperty = pizzaBody.GetType().GetProperty(pizzaPropToString);
-                    if (pizzaProperty.GetValue(pizzaBody) != null)
+                    if (!isPrimaryId)
                     {
-                        var getPizzaBodyPropValue = pizzaProp.GetValue(pizzaBody);
-                        pizza.GetType().GetProperty(pizzaPropToString).SetValue(pizza, pizzaProperty.GetValue(pizzaBody));
-                        pizzaProperty.SetValue(pizza, pizzaProp.GetValue(pizzaBody));
+                        if (pizzaProperty.GetValue(pizzaBody) != null)
+                        {
+                            var getPizzaBodyPropValue = pizzaProp.GetValue(pizzaBody);
+                            pizza.GetType().GetProperty(pizzaPropToString).SetValue(pizza, pizzaProperty.GetValue(pizzaBody));
+                            pizzaProperty.SetValue(pizza, pizzaProp.GetValue(pizzaBody));
+                        }
                     }
                 }
-                
+
                 //pizza.pizzaBase = pizzaBody.pizzaBase;
                 //pizza.name = pizzaBody.name;
                 //pizza.nonVeg = pizzaBody.nonVeg;

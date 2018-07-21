@@ -11,3 +11,4 @@ D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csprojResolveAssemblyReference
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.InitialCreate.resources
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csproj.GenerateResource.Cache
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedPizzaClassForVegNonveg.resources
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedIdNamesOfPizzaAndToppingClasses.resources

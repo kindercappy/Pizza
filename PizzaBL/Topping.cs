@@ -12,7 +12,7 @@ namespace PizzaBL
     public class Topping
     {
         [Key]
-        public int id { get; set; }
+        public int toppingId { get; set; }
         public ToppingType topping { get; set; }
     }
 }
