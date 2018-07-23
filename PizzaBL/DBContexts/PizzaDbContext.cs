@@ -12,5 +12,7 @@ namespace PizzaBL.DBContexts
         public DbSet<Pizza> Pizza { get; set; }
         public DbSet<Topping> Toppings { get; set; }
         public DbSet<PizzaToppings> PizzaToppings { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<OrderItem> OrderItem { get; set; }
     }
 }

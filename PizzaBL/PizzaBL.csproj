@@ -50,22 +50,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBContexts\PizzaDbContext.cs" />
+    <Compile Include="DummyData.cs" />
     <Compile Include="Enums\PizzaBase.cs" />
     <Compile Include="Enums\ToppingType.cs" />
-    <Compile Include="Migrations\201807201234114_InitialCreate.cs" />
-    <Compile Include="Migrations\201807201234114_InitialCreate.Designer.cs">
-      <DependentUpon>201807201234114_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201807210942397_InitialCreate.cs" />
+    <Compile Include="Migrations\201807210942397_InitialCreate.Designer.cs">
+      <DependentUpon>201807210942397_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807201351554_UpdatedPizzaClassForVegNonveg.cs" />
-    <Compile Include="Migrations\201807201351554_UpdatedPizzaClassForVegNonveg.Designer.cs">
-      <DependentUpon>201807201351554_UpdatedPizzaClassForVegNonveg.cs</DependentUpon>
+    <Compile Include="Migrations\201807231215541_UpdatedDbContextTablesNamesOfOrdersToOrderAndOrderItemsToOrderItem.cs" />
+    <Compile Include="Migrations\201807231215541_UpdatedDbContextTablesNamesOfOrdersToOrderAndOrderItemsToOrderItem.Designer.cs">
+      <DependentUpon>201807231215541_UpdatedDbContextTablesNamesOfOrdersToOrderAndOrderItemsToOrderItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.cs" />
-    <Compile Include="Migrations\201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.Designer.cs">
-      <DependentUpon>201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.cs</DependentUpon>
+    <Compile Include="Migrations\201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.cs" />
+    <Compile Include="Migrations\201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.Designer.cs">
+      <DependentUpon>201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
+    <Compile Include="OrderItem.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaMenu.cs" />
     <Compile Include="PizzaToppings.cs" />
@@ -80,14 +82,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807201234114_InitialCreate.resx">
-      <DependentUpon>201807201234114_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807210942397_InitialCreate.resx">
+      <DependentUpon>201807210942397_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807201351554_UpdatedPizzaClassForVegNonveg.resx">
-      <DependentUpon>201807201351554_UpdatedPizzaClassForVegNonveg.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807231215541_UpdatedDbContextTablesNamesOfOrdersToOrderAndOrderItemsToOrderItem.resx">
+      <DependentUpon>201807231215541_UpdatedDbContextTablesNamesOfOrdersToOrderAndOrderItemsToOrderItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.resx">
-      <DependentUpon>201807210512233_UpdatedIdNamesOfPizzaAndToppingClasses.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.resx">
+      <DependentUpon>201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

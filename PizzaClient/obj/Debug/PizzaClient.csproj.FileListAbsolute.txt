@@ -31,3 +31,9 @@ D:\cappy\projects\PIzza\PizzaClient\bin\Microsoft.CodeDom.Providers.DotNetCompil
 D:\cappy\projects\PIzza\PizzaClient\obj\Debug\PizzaClient.csprojResolveAssemblyReference.cache
 D:\cappy\projects\PIzza\PizzaClient\obj\Debug\PizzaClient.dll
 D:\cappy\projects\PIzza\PizzaClient\obj\Debug\PizzaClient.pdb
+D:\cappy\projects\PIzza\PizzaClient\bin\PizzaBL.dll
+D:\cappy\projects\PIzza\PizzaClient\bin\EntityFramework.dll
+D:\cappy\projects\PIzza\PizzaClient\bin\PizzaBL.pdb
+D:\cappy\projects\PIzza\PizzaClient\bin\EntityFramework.xml
+D:\cappy\projects\PIzza\PizzaClient\bin\EntityFramework.SqlServer.dll
+D:\cappy\projects\PIzza\PizzaClient\bin\EntityFramework.SqlServer.xml

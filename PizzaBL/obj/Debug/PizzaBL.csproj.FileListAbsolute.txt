@@ -10,5 +10,5 @@ D:\cappy\projects\PIzza\PizzaBL\bin\Debug\EntityFramework.SqlServer.xml
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csprojResolveAssemblyReference.cache
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.InitialCreate.resources
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csproj.GenerateResource.Cache
-D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedPizzaClassForVegNonveg.resources
-D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedIdNamesOfPizzaAndToppingClasses.resources
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedDbContextTablesNamesOfOrdersToOrderAndOrderItemsToOrderItem.resources
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.resources
