@@ -16,28 +16,64 @@ namespace PizzaApi.Controllers
         //Pizza Actions
         [Route("new")]
         [HttpPost]
-        public int CreateNewPizza([FromBody]Pizza pizzaBody)
+        public IHttpActionResult CreateNewPizza([FromBody]Pizza pizzaBody)
         {
             Pizza pizza = new Pizza();
-            var pizzaAdded = pizza.AddPizza(pizzaBody);
-            return pizzaAdded;
+            var pizzaAdded = pizza.CreateOrder(pizzaBody);
+            if (pizzaAdded > 0)
+            {
+                return Ok(pizzaAdded);
+            }
+            else
+            {
+                return BadRequest(Message.PIZZA_NOT_CREATED);
+            }
         }
         [Route("{pizzaId}")]
         [HttpPost]
-        public Pizza UpdatePizza(int pizzaId,[FromBody]Pizza pizzaBody)
+        public IHttpActionResult UpdatePizza(int pizzaId, [FromBody]Pizza pizzaBody)
         {
             Pizza pizza = new Pizza();
-            var pizzaUpdated = pizza.UpdatePizza(pizzaId,pizzaBody);
-            return pizzaUpdated;
+            var pizzaUpdated = pizza.UpdatePizza(pizzaId, pizzaBody);
+            if (pizzaUpdated != null)
+            {
+                return Ok(pizzaUpdated);
+            }
+            else
+            {
+                return BadRequest(Message.REQUEST_NOT_UPDATED);
+            }
+        }
+        [Route("{pizzaId}")]
+        [HttpGet]
+        public IHttpActionResult GetPizza(int pizzaId)
+        {
+            Pizza pizza = new Pizza();
+            var pizzaReceived = pizza.GetPizza(pizzaId);
+            if (pizzaReceived != null)
+            {
+                return Ok(pizzaReceived);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
         // Toppings Actions
         [Route("{pizzaId}/toppings")]
         [HttpPost]
-        public Pizza UpdatePizzaToppingList(int pizzaid)
+        public IHttpActionResult UpdatePizzaToppingList(int pizzaid)
         {
             Pizza pizza = new Pizza();
             var pizzaUpdated = pizza.UpdatePizzaToppingList(pizzaid);
-            return pizzaUpdated;
+            if (pizzaUpdated != null)
+            {
+                return Ok(pizzaUpdated);
+            }
+            else
+            {
+                return BadRequest(Message.REQUEST_NOT_UPDATED);
+            }
         }
     }
 }

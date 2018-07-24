@@ -114,5 +114,29 @@ namespace PizzaBL
             return new PizzaToppings() { };
         }
         // TODO : Methods for the order and orderItem table 
+        public Order GetNewOrderToInsert()
+        {
+            Pizza pizzaList = new Pizza();
+            int pizzaIdToOrderFirst = pizzaList.GetAllPizzas().Select(pizz => pizz.pizzaId).FirstOrDefault();
+            int pizzaIdToOrderLast = pizzaList.GetAllPizzas().Select(pizz => pizz.pizzaId).LastOrDefault();
+            List<OrderItem> newOrderItems = new List<OrderItem>() {
+                new OrderItem()
+                {
+                    pizzaItem = pizzaIdToOrderFirst
+                },
+                new OrderItem()
+                {
+                    pizzaItem = pizzaIdToOrderLast
+                }
+            };
+
+            Order newOrder = new Order() {
+                customerName = "Kinder",
+                customerPhone = "0000000000",
+                orderItems = newOrderItems
+            };
+
+            return newOrder;
+        }
     }
 }

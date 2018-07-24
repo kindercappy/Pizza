@@ -12,3 +12,5 @@ D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.InitialCreate.resou
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.csproj.GenerateResource.Cache
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedDbContextTablesNamesOfOrdersToOrderAndOrderItemsToOrderItem.resources
 D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.resources
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedOrderClassToIncludeOrderStatus.resources
+D:\cappy\projects\PIzza\PizzaBL\obj\Debug\PizzaBL.Migrations.UpdatedOrderItemFieldNameFromPizzaItemIdToPizzaItem.resources

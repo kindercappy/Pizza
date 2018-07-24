@@ -21,14 +21,18 @@ namespace PizzaClient
             DummyData newDataOps = new DummyData();
             Pizza newPizzaOps = new Pizza();
             Topping newTopping = new Topping();
-            int toppingInserted = newTopping.InsertNewTopping(newDataOps.GetNewToppingToInsert());
-            int pizzaInserted = newPizzaOps.AddPizza(newDataOps.GetNewPizzaToInsert());
-            //newPizzaOps.AddPizza(newPizzas.GetPizzaToppings());
+            Order newOrder = new Order();
+            newTopping.InsertNewTopping(newDataOps.GetNewToppingToInsert());
+            newPizzaOps.CreateOrder(newDataOps.GetNewPizzaToInsert());
+            newOrder.CreateOrder(newDataOps.GetNewOrderToInsert());
+
+            //newPizzaOps.CreateOrder(newPizzas.GetPizzaToppings());
             //Console.WriteLine(newDataOps.GetPizzaToppings());
-            BulletedListToppingsData.DataSource = newDataOps.GetPizzaToppings().Select(topping => topping.topping);
-            BulletedListToppingsData.DataBind();
-            BulletedListPizzaData.DataSource = newDataOps.GetPizzas().Select(pizza => pizza.name);
-            BulletedListPizzaData.DataBind();
+
+            //BulletedListToppingsData.DataSource = newDataOps.GetPizzaToppings().Select(topping => topping.topping);
+            //BulletedListToppingsData.DataBind();
+            //BulletedListPizzaData.DataSource = newDataOps.GetPizzas().Select(pizza => pizza.name);
+            //BulletedListPizzaData.DataBind();
         }
     }
 }

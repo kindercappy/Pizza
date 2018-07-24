@@ -9,6 +9,6 @@ namespace PizzaBL
         [Key]
         public int orderItemId { get; set; }
         public int orderId { get; set; }
-        public int pizzaItemId { get; set; }
+        public int pizzaItem { get; set; }
     }
 }

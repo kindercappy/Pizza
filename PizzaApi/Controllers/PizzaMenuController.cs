@@ -13,19 +13,35 @@ namespace PizzaApi.Controllers
     {
         [Route("")]
         [HttpGet]
-        public List<Pizza> GetAllPizzas()
+        public IHttpActionResult GetAllPizzas()
         {
             Pizza pizzas = new Pizza();
             List<Pizza> allPizzas = pizzas.GetAllPizzas();
-            return allPizzas;
+            if (allPizzas != null)
+            {
+                return Ok(allPizzas);
+            }
+            else
+            {
+
+                return NotFound();
+            }
         }
         [Route("{typeOfPizza}")]
         [HttpGet]
-        public List<Pizza> GetVegOrNonvegPizzaMenu(string typeOfPizza)
+        public IHttpActionResult GetVegOrNonvegPizzaMenu(string typeOfPizza)
         {
             Pizza pizzas = new Pizza();
             List<Pizza> typesOfPizza = pizzas.GetTypesOfPizzas(typeOfPizza);
-            return typesOfPizza;
+            if (typeOfPizza != null)
+            {
+                return Ok(typesOfPizza);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
+
     }
 }

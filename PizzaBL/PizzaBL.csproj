@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constant\Message.cs" />
     <Compile Include="DBContexts\PizzaDbContext.cs" />
     <Compile Include="DummyData.cs" />
+    <Compile Include="Enums\OrderStatus.cs" />
     <Compile Include="Enums\PizzaBase.cs" />
     <Compile Include="Enums\ToppingType.cs" />
     <Compile Include="Migrations\201807210942397_InitialCreate.cs" />
@@ -64,6 +66,14 @@
     <Compile Include="Migrations\201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.cs" />
     <Compile Include="Migrations\201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.Designer.cs">
       <DependentUpon>201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240850366_UpdatedOrderClassToIncludeOrderStatus.cs" />
+    <Compile Include="Migrations\201807240850366_UpdatedOrderClassToIncludeOrderStatus.Designer.cs">
+      <DependentUpon>201807240850366_UpdatedOrderClassToIncludeOrderStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807240856527_UpdatedOrderItemFieldNameFromPizzaItemIdToPizzaItem.cs" />
+    <Compile Include="Migrations\201807240856527_UpdatedOrderItemFieldNameFromPizzaItemIdToPizzaItem.Designer.cs">
+      <DependentUpon>201807240856527_UpdatedOrderItemFieldNameFromPizzaItemIdToPizzaItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -90,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.resx">
       <DependentUpon>201807231225188_UpdatedTableNamesOfOrdersToOrderAndOrderItemsToOrderItemPart2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240850366_UpdatedOrderClassToIncludeOrderStatus.resx">
+      <DependentUpon>201807240850366_UpdatedOrderClassToIncludeOrderStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240856527_UpdatedOrderItemFieldNameFromPizzaItemIdToPizzaItem.resx">
+      <DependentUpon>201807240856527_UpdatedOrderItemFieldNameFromPizzaItemIdToPizzaItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
