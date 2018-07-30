@@ -11,15 +11,15 @@ using System.Threading.Tasks;
 namespace PizzaBL
 {
     [Table("Toppings")]
-    public class Topping
+    public class ToppingRepository
     {
         [Key]
         public int toppingId { get; set; }
         public ToppingType topping { get; set; }
 
-        public int InsertNewTopping(Topping toppingBody)
+        public int InsertNewTopping(ToppingRepository toppingBody)
         {
-            Topping newTopping = new Topping() {
+            ToppingRepository newTopping = new ToppingRepository() {
                 topping = toppingBody.topping
             };
             using (var db = new PizzaDbContext())

@@ -16,9 +16,9 @@ namespace PizzaApi.Controllers
         //Pizza Actions
         [Route("new")]
         [HttpPost]
-        public IHttpActionResult CreateNewPizza([FromBody]Pizza pizzaBody)
+        public IHttpActionResult CreateNewPizza([FromBody]PizzaRepository pizzaBody)
         {
-            Pizza pizza = new Pizza();
+            PizzaRepository pizza = new PizzaRepository();
             var pizzaAdded = pizza.CreateOrder(pizzaBody);
             if (pizzaAdded > 0)
             {
@@ -31,9 +31,9 @@ namespace PizzaApi.Controllers
         }
         [Route("{pizzaId}")]
         [HttpPost]
-        public IHttpActionResult UpdatePizza(int pizzaId, [FromBody]Pizza pizzaBody)
+        public IHttpActionResult UpdatePizza(int pizzaId, [FromBody]PizzaRepository pizzaBody)
         {
-            Pizza pizza = new Pizza();
+            PizzaRepository pizza = new PizzaRepository();
             var pizzaUpdated = pizza.UpdatePizza(pizzaId, pizzaBody);
             if (pizzaUpdated != null)
             {
@@ -48,7 +48,7 @@ namespace PizzaApi.Controllers
         [HttpGet]
         public IHttpActionResult GetPizza(int pizzaId)
         {
-            Pizza pizza = new Pizza();
+            PizzaRepository pizza = new PizzaRepository();
             var pizzaReceived = pizza.GetPizza(pizzaId);
             if (pizzaReceived != null)
             {
@@ -64,7 +64,7 @@ namespace PizzaApi.Controllers
         [HttpPost]
         public IHttpActionResult UpdatePizzaToppingList(int pizzaid)
         {
-            Pizza pizza = new Pizza();
+            PizzaRepository pizza = new PizzaRepository();
             var pizzaUpdated = pizza.UpdatePizzaToppingList(pizzaid);
             if (pizzaUpdated != null)
             {

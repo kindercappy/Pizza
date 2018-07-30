@@ -11,17 +11,17 @@ using System.Threading.Tasks;
 namespace PizzaBL
 {
     [Table("Order")]
-    public class Order
+    public class OrderRepository
     {
         [Key]
         public int orderId { get; set; }
-        public List<OrderItem> orderItems { get; set; }
+        public List<OrderItemRepository> orderItems { get; set; }
         public string customerName { get; set; }
         public string customerPhone { get; set; }
         public OrderStatus orderStatus { get; set; }
 
 
-        public int CreateOrder(Order orderBody)
+        public int CreateOrder(OrderRepository orderBody)
         {
             try
             {
@@ -38,9 +38,9 @@ namespace PizzaBL
             return orderBody.orderId;
         }
 
-        public Order GetOrder(int orderId)
+        public OrderRepository GetOrder(int orderId)
         {
-            Order getOrder = new Order();
+            OrderRepository getOrder = new OrderRepository();
             try
             {
                 using (var db = new PizzaDbContext())

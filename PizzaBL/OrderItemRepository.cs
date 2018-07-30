@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace PizzaBL
 {
     [Table("OrderItem")]
-    public class OrderItem
+    public class OrderItemRepository
     {
         [Key]
         public int orderItemId { get; set; }

@@ -14,9 +14,9 @@ namespace PizzaApi.Controllers
     {
         [Route("")]
         [HttpPost]
-        public IHttpActionResult CreateOrderController([FromBody] Order orderBody)
+        public IHttpActionResult CreateOrderController([FromBody] OrderRepository orderBody)
         {
-            Order newOrder = new Order();
+            OrderRepository newOrder = new OrderRepository();
             int statusMessage = newOrder.CreateOrder(orderBody);
             if (statusMessage > 0)
             {
@@ -32,7 +32,7 @@ namespace PizzaApi.Controllers
         [HttpGet]
         public HttpResponseMessage GetOrderController(int orderId)
         {
-            Order getOrder = new Order();
+            OrderRepository getOrder = new OrderRepository();
             var result = getOrder.GetOrder(orderId);
             if (result != null)
             {

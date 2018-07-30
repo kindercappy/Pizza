@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PizzaBL
 {
-    public class DummyData
+    public class DummyDataRepository
     {
         private int globalNumberForPizza;
 
@@ -31,28 +31,28 @@ namespace PizzaBL
 
             }
         }
-        public List<Pizza> GetNewPizzaListToInsert()
+        public List<PizzaRepository> GetNewPizzaListToInsert()
         {
-            return new List<Pizza>() {
-                new Pizza() { name = "Farmhouse",pizzaBase = PizzaBase.Cheese, nonVeg = false, veg = true, toppingsList =   new List<PizzaToppings>() {
-                    new PizzaToppings() { }
+            return new List<PizzaRepository>() {
+                new PizzaRepository() { name = "Farmhouse",pizzaBase = PizzaBase.Cheese, nonVeg = false, veg = true, toppingsList =   new List<PizzaToppingsRepository>() {
+                    new PizzaToppingsRepository() { }
                 } },
             };
         }
-        public Pizza GetNewPizzaToInsert()
+        public PizzaRepository GetNewPizzaToInsert()
         {
-            DummyData newDataOps = new DummyData();
-            PizzaToppings newPizzaToppinsToInsert = new PizzaToppings();
+            DummyDataRepository newDataOps = new DummyDataRepository();
+            PizzaToppingsRepository newPizzaToppinsToInsert = new PizzaToppingsRepository();
 
-            List<PizzaToppings> pizzaToppings = new List<PizzaToppings>() {
-                new PizzaToppings() {
+            List<PizzaToppingsRepository> pizzaToppings = new List<PizzaToppingsRepository>() {
+                new PizzaToppingsRepository() {
                     toppingId = GetPizzaToppings().FirstOrDefault().toppingId
                 },
-                new PizzaToppings() {
+                new PizzaToppingsRepository() {
                     toppingId = GetPizzaToppings().LastOrDefault().toppingId
                 }
             };
-            return new Pizza()
+            return new PizzaRepository()
             {
                 name = "Farmhouse " + GlobalNumberForPizza,
                 nonVeg = false,
@@ -61,37 +61,37 @@ namespace PizzaBL
                 toppingsList = pizzaToppings
             };
         }
-        public List<Topping> GetNewToppingsToInsert()
+        public List<ToppingRepository> GetNewToppingsToInsert()
         {
-            return new List<Topping>() {
-                new Topping()
+            return new List<ToppingRepository>() {
+                new ToppingRepository()
                 {
                     topping = ToppingType.Onion
                 },
-                new Topping()
+                new ToppingRepository()
                 {
                     topping = ToppingType.Onion
                 },
-                new Topping()
+                new ToppingRepository()
                 {
                     topping = ToppingType.Onion
                 },
-                new Topping()
+                new ToppingRepository()
                 {
                     topping = ToppingType.Onion
                 }
             };
         }
-        public Topping GetNewToppingToInsert()
+        public ToppingRepository GetNewToppingToInsert()
         {
-            return new Topping()
+            return new ToppingRepository()
             {
                 topping = ToppingType.Tomato
             };
         }
-        public List<Pizza> GetPizzas()
+        public List<PizzaRepository> GetPizzas()
         {
-            List<Pizza> pizzas = new List<Pizza>();
+            List<PizzaRepository> pizzas = new List<PizzaRepository>();
             using (var db = new PizzaDbContext())
             {
                 pizzas = db.Pizza.ToList();
@@ -99,38 +99,38 @@ namespace PizzaBL
             }
             return pizzas;
         }
-        public List<Topping> GetPizzaToppings()
+        public List<ToppingRepository> GetPizzaToppings()
         {
-            List<Topping> toppings = new List<Topping>();
+            List<ToppingRepository> toppings = new List<ToppingRepository>();
             using (var db = new PizzaDbContext())
             {
                 toppings = db.Toppings.ToList();
             }
             return toppings;
         }
-        public PizzaToppings GetNewPizzaToppingToInsert()
+        public PizzaToppingsRepository GetNewPizzaToppingToInsert()
         {
-            DummyData newDataOps = new DummyData();
-            return new PizzaToppings() { };
+            DummyDataRepository newDataOps = new DummyDataRepository();
+            return new PizzaToppingsRepository() { };
         }
         // TODO : Methods for the order and orderItem table 
-        public Order GetNewOrderToInsert()
+        public OrderRepository GetNewOrderToInsert()
         {
-            Pizza pizzaList = new Pizza();
+            PizzaRepository pizzaList = new PizzaRepository();
             int pizzaIdToOrderFirst = pizzaList.GetAllPizzas().Select(pizz => pizz.pizzaId).FirstOrDefault();
             int pizzaIdToOrderLast = pizzaList.GetAllPizzas().Select(pizz => pizz.pizzaId).LastOrDefault();
-            List<OrderItem> newOrderItems = new List<OrderItem>() {
-                new OrderItem()
+            List<OrderItemRepository> newOrderItems = new List<OrderItemRepository>() {
+                new OrderItemRepository()
                 {
                     pizzaItem = pizzaIdToOrderFirst
                 },
-                new OrderItem()
+                new OrderItemRepository()
                 {
                     pizzaItem = pizzaIdToOrderLast
                 }
             };
 
-            Order newOrder = new Order() {
+            OrderRepository newOrder = new OrderRepository() {
                 customerName = "Kinder",
                 customerPhone = "0000000000",
                 orderItems = newOrderItems

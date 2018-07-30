@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PizzaBL
 {
-    public static class PizzaMenu
+    public static class PizzaMenuRepository
     {
         
-        public static List<Pizza> GetPizzaMenu()
+        public static List<PizzaRepository> GetPizzaMenu()
         {
-            List<Pizza> allPizzas = new List<Pizza>();
+            List<PizzaRepository> allPizzas = new List<PizzaRepository>();
             return allPizzas;
         }
 

@@ -49,9 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constant\GeneralStrings.cs" />
     <Compile Include="Constant\Message.cs" />
     <Compile Include="DBContexts\PizzaDbContext.cs" />
-    <Compile Include="DummyData.cs" />
+    <Compile Include="DummyDataRepository.cs" />
     <Compile Include="Enums\OrderStatus.cs" />
     <Compile Include="Enums\PizzaBase.cs" />
     <Compile Include="Enums\ToppingType.cs" />
@@ -76,13 +77,13 @@
       <DependentUpon>201807240856527_UpdatedOrderItemFieldNameFromPizzaItemIdToPizzaItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="OrderItem.cs" />
-    <Compile Include="Pizza.cs" />
-    <Compile Include="PizzaMenu.cs" />
-    <Compile Include="PizzaToppings.cs" />
+    <Compile Include="OrderRepository.cs" />
+    <Compile Include="OrderItemRepository.cs" />
+    <Compile Include="PizzaRepository.cs" />
+    <Compile Include="PizzaMenuRepository.cs" />
+    <Compile Include="PizzaToppingsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Topping.cs" />
+    <Compile Include="ToppingRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

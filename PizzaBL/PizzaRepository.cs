@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace PizzaBL
 {
     [Table("Pizza")]
-    public class Pizza
+    public class PizzaRepository
     {
         [Key]
         public int pizzaId { get; set; }
@@ -19,9 +19,9 @@ namespace PizzaBL
         public PizzaBase pizzaBase { get; set; }
         public bool veg { get; set; }
         public bool nonVeg { get; set; }
-        public ICollection<PizzaToppings> toppingsList { get; set; }
+        public ICollection<PizzaToppingsRepository> toppingsList { get; set; }
         // TODO : Implement all proper exection handling and response message 
-        public int CreateOrder(Pizza pizzaBody)
+        public int CreateOrder(PizzaRepository pizzaBody)
         {
             try
             {
@@ -38,9 +38,9 @@ namespace PizzaBL
             return pizzaBody.pizzaId;
         }
 
-        public List<Pizza> GetTypesOfPizzas(string typeOfPizza)
+        public List<PizzaRepository> GetTypesOfPizzas(string typeOfPizza)
         {
-            List<Pizza> pizzas = new List<Pizza>();
+            List<PizzaRepository> pizzas = new List<PizzaRepository>();
             try
             {
                 using (var db = new PizzaDbContext())
@@ -66,9 +66,9 @@ namespace PizzaBL
             return pizzas;
         }
 
-        public Pizza GetPizza(int pizzaId)
+        public PizzaRepository GetPizza(int pizzaId)
         {
-            Pizza getPizza = new Pizza();
+            PizzaRepository getPizza = new PizzaRepository();
             try
             {
                 using (var db = new PizzaDbContext())
@@ -83,12 +83,12 @@ namespace PizzaBL
             return getPizza;
         }
 
-        public Pizza UpdatePizza(int pizzaId, Pizza pizzaBody)
+        public PizzaRepository UpdatePizza(int pizzaId, PizzaRepository pizzaBody)
         {
-            Pizza pizza = new Pizza();
+            PizzaRepository pizza = new PizzaRepository();
             try
             {
-                var pizzaProps = typeof(Pizza).GetProperties();
+                var pizzaProps = typeof(PizzaRepository).GetProperties();
 
                 using (var db = new PizzaDbContext())
                 {
@@ -119,9 +119,9 @@ namespace PizzaBL
             return pizza;
         }
 
-        public List<Pizza> GetAllPizzas()
+        public List<PizzaRepository> GetAllPizzas()
         {
-            List<Pizza> pizzas = new List<Pizza>();
+            List<PizzaRepository> pizzas = new List<PizzaRepository>();
             try
             {
                 using (var db = new PizzaDbContext())
@@ -137,15 +137,15 @@ namespace PizzaBL
             return pizzas;
         }
 
-        public Pizza UpdatePizzaToppingList(int pizzaid)
+        public PizzaRepository UpdatePizzaToppingList(int pizzaid)
         {
-            Pizza pizza = new Pizza();
+            PizzaRepository pizza = new PizzaRepository();
             try
             {
                 using (var db = new PizzaDbContext())
                 {
                     pizza = db.Pizza.Where(element => element.pizzaId == pizzaid).FirstOrDefault();
-                    var pizzaToppings = new List<PizzaToppings>();
+                    var pizzaToppings = new List<PizzaToppingsRepository>();
                     pizzaToppings = db.PizzaToppings.Where(e => e.pizzaId == pizzaid).ToList();
                     pizza.toppingsList = pizzaToppings;
 

@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="PizzaClient.Menu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="PHMenuHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+        <h1>Master Page</h1>
+    </div>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="PHMenuBody" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ScriptManager ID="SMMenu" runat="server">
+        
+        </asp:ScriptManager>
+    </div>
+    </form>
+</body>
+</html>

@@ -18,10 +18,10 @@ namespace PizzaClient
 
         protected void btnDataOps_Click(object sender, EventArgs e)
         {
-            DummyData newDataOps = new DummyData();
-            Pizza newPizzaOps = new Pizza();
-            Topping newTopping = new Topping();
-            Order newOrder = new Order();
+            DummyDataRepository newDataOps = new DummyDataRepository();
+            PizzaRepository newPizzaOps = new PizzaRepository();
+            ToppingRepository newTopping = new ToppingRepository();
+            OrderRepository newOrder = new OrderRepository();
             newTopping.InsertNewTopping(newDataOps.GetNewToppingToInsert());
             newPizzaOps.CreateOrder(newDataOps.GetNewPizzaToInsert());
             newOrder.CreateOrder(newDataOps.GetNewOrderToInsert());

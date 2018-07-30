@@ -15,8 +15,8 @@ namespace PizzaApi.Controllers
         [HttpGet]
         public IHttpActionResult GetAllPizzas()
         {
-            Pizza pizzas = new Pizza();
-            List<Pizza> allPizzas = pizzas.GetAllPizzas();
+            PizzaRepository pizzas = new PizzaRepository();
+            List<PizzaRepository> allPizzas = pizzas.GetAllPizzas();
             if (allPizzas != null)
             {
                 return Ok(allPizzas);
@@ -31,8 +31,8 @@ namespace PizzaApi.Controllers
         [HttpGet]
         public IHttpActionResult GetVegOrNonvegPizzaMenu(string typeOfPizza)
         {
-            Pizza pizzas = new Pizza();
-            List<Pizza> typesOfPizza = pizzas.GetTypesOfPizzas(typeOfPizza);
+            PizzaRepository pizzas = new PizzaRepository();
+            List<PizzaRepository> typesOfPizza = pizzas.GetTypesOfPizzas(typeOfPizza);
             if (typeOfPizza != null)
             {
                 return Ok(typesOfPizza);

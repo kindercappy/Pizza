@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace PizzaBL
 {
-    public class PizzaToppings
+    [Table("PizzaToppings")]
+    public class PizzaToppingsRepository
     {
         [Key]
         public int id { get; set; }
